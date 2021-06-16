@@ -10,4 +10,17 @@ export interface Pokemon {
   url: string;
 }
 
-export interface PokemonDetails {}
+export interface PokemonDetails {
+  name: string;
+  height: number;
+  weight: number;
+  id: number;
+  sprites: {
+    front_default: string;
+    other: {
+      official_artwork: {
+        front_default: string;
+      };
+    };
+  };
+}
