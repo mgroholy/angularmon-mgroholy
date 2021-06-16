@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { PokemonListComponent } from './components/pokemon-list/pokemon-list.component';
+import { PokemonCardComponent } from './components/pokemon-card/pokemon-card.component';
 
 const appRoutes: Routes = [
   // {
@@ -16,7 +17,7 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, PokemonListComponent],
+  declarations: [AppComponent, NavbarComponent, PokemonListComponent, PokemonCardComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
