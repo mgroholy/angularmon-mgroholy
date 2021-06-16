@@ -1,5 +1,4 @@
 <div class="card-container">
-  <div *ngFor="let pokemon of pokemons">
-    <p>{{ pokemon.name }}</p>
-  </div>
+  <app-pokemon-card *ngFor="let pokemon of pokemons" [pokemon]="pokemon">
+  </app-pokemon-card>
 </div>
