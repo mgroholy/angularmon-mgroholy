@@ -35,4 +35,11 @@ export class PokemonCardComponent implements OnInit {
       console.log(pokemon);
     });
   }
+
+  formatName(): string {
+    return (
+      this.pokemonDetails.name.charAt(0).toUpperCase() +
+      this.pokemonDetails.name.substring(1)
+    );
+  }
 }
