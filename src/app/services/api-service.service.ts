@@ -7,15 +7,19 @@ import { ApiResponse, PokemonDetails } from '../Types';
   providedIn: 'root',
 })
 export class ApiServiceService {
-  apiUrl: string = 'https://pokeapi.co/api/v2/pokemon';
+  apiUrl: string = 'https://pokeapi.co/api/v2';
 
   constructor(private httpClient: HttpClient) {}
 
   getPokemons(): Observable<ApiResponse> {
-    return this.httpClient.get<ApiResponse>(this.apiUrl);
+    return this.httpClient.get<ApiResponse>(`${this.apiUrl}/pokemon`);
   }
 
   getPokemonDetails(url: string): Observable<PokemonDetails> {
     return this.httpClient.get<PokemonDetails>(url);
+  }
+
+  getTypes(): Observable<ApiResponse> {
+    return this.httpClient.get<ApiResponse>(`${this.apiUrl}/type`);
   }
 }

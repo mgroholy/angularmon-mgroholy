@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ApiServiceService } from 'src/app/services/api-service.service';
-import { Pokemon, PokemonDetails } from 'src/app/Types';
+import { ListItem, PokemonDetails } from 'src/app/Types';
 
 @Component({
   selector: 'app-pokemon-card',
@@ -8,7 +8,7 @@ import { Pokemon, PokemonDetails } from 'src/app/Types';
   styleUrls: ['./pokemon-card.component.css'],
 })
 export class PokemonCardComponent implements OnInit {
-  @Input() pokemon: Pokemon;
+  @Input() pokemon: ListItem;
   pokemonDetails: PokemonDetails;
 
   constructor(private apiService: ApiServiceService) {
