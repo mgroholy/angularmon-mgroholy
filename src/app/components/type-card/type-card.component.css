@@ -1,0 +1,16 @@
+.type-card {
+  width: 100px;
+  height: 70px;
+  border: 2px solid #2c4694;
+  margin: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.type-card:hover {
+  transform: scale(1.07);
+  transition: 0.3s all ease-in-out;
+}
