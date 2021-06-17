@@ -1,5 +1,10 @@
 <div class="navbar">
-  <img class="navbar-logo" src="assets/images/logo.png" alt="pokemon logo" />
+  <img
+    (click)="backToMain()"
+    class="navbar-logo"
+    src="assets/images/logo.png"
+    alt="pokemon logo"
+  />
   <ul class="nav-list">
     <a class="nav-link" routerLink="/pokemons" routerLinkActive="active"
       >Pokemon</a
