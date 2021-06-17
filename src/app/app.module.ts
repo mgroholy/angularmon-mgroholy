@@ -10,6 +10,7 @@ import { PokemonListComponent } from './components/pokemon-list/pokemon-list.com
 import { PokemonCardComponent } from './components/pokemon-card/pokemon-card.component';
 import { TypeListComponent } from './components/type-list/type-list.component';
 import { TypeCardComponent } from './components/type-card/type-card.component';
+import { PokemonDetailsComponent } from './components/pokemon-details/pokemon-details.component';
 
 const appRoutes: Routes = [
   {
@@ -19,6 +20,10 @@ const appRoutes: Routes = [
   {
     path: 'types',
     component: TypeListComponent,
+  },
+  {
+    path: 'pokemons/:id',
+    component: PokemonDetailsComponent,
   },
 ];
 
@@ -30,6 +35,7 @@ const appRoutes: Routes = [
     PokemonCardComponent,
     TypeListComponent,
     TypeCardComponent,
+    PokemonDetailsComponent,
   ],
   imports: [
     BrowserModule,
