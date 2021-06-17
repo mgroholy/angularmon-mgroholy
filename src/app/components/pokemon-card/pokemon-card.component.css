@@ -1,0 +1,18 @@
+.pokemon-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  border: 2px solid #2c4694;
+  margin: 10px;
+  padding: 20px;
+  cursor: pointer;
+  height: 150px;
+  width: 100px;
+}
+
+.pokemon-card:hover {
+  transform: scale(1.05);
+  transition: 0.3s transform ease-in-out;
+}
