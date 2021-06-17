@@ -10,14 +10,19 @@ import { PokemonListComponent } from './components/pokemon-list/pokemon-list.com
 import { PokemonCardComponent } from './components/pokemon-card/pokemon-card.component';
 
 const appRoutes: Routes = [
-  // {
-  //   path: 'pokemon',
-  //   component:
-  // }
+  {
+    path: 'pokemons',
+    component: PokemonListComponent,
+  },
 ];
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, PokemonListComponent, PokemonCardComponent],
+  declarations: [
+    AppComponent,
+    NavbarComponent,
+    PokemonListComponent,
+    PokemonCardComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
