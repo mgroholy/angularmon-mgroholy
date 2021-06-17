@@ -9,6 +9,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { PokemonListComponent } from './components/pokemon-list/pokemon-list.component';
 import { PokemonCardComponent } from './components/pokemon-card/pokemon-card.component';
 import { TypeListComponent } from './components/type-list/type-list.component';
+import { TypeCardComponent } from './components/type-card/type-card.component';
 
 const appRoutes: Routes = [
   {
@@ -28,6 +29,7 @@ const appRoutes: Routes = [
     PokemonListComponent,
     PokemonCardComponent,
     TypeListComponent,
+    TypeCardComponent,
   ],
   imports: [
     BrowserModule,
