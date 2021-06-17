@@ -2,12 +2,13 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { ApiResponse, PokemonDetails } from '../Types';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ApiServiceService {
-  apiUrl: string = 'https://pokeapi.co/api/v2';
+  apiUrl: string = environment.apiUrl;
 
   constructor(private httpClient: HttpClient) {}
 
