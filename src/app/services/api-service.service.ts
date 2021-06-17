@@ -11,7 +11,10 @@ export class ApiServiceService {
 
   constructor(private httpClient: HttpClient) {}
 
-  getPokemons(): Observable<ApiResponse> {
+  getPokemons(url?: string): Observable<ApiResponse> {
+    if (url) {
+      return this.httpClient.get<ApiResponse>(url);
+    }
     return this.httpClient.get<ApiResponse>(`${this.apiUrl}/pokemon`);
   }
 
