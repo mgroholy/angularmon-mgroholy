@@ -13,6 +13,7 @@ import { TypeCardComponent } from './components/type-card/type-card.component';
 import { PokemonDetailsComponent } from './components/pokemon-details/pokemon-details.component';
 import { PaginationComponent } from './components/pagination/pagination.component';
 import { MainPageComponent } from './components/main-page/main-page.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 const appRoutes: Routes = [
   {
@@ -31,6 +32,10 @@ const appRoutes: Routes = [
     path: '',
     component: MainPageComponent,
   },
+  {
+    path: '**',
+    component: PageNotFoundComponent,
+  },
 ];
 
 @NgModule({
@@ -44,6 +49,7 @@ const appRoutes: Routes = [
     PokemonDetailsComponent,
     PaginationComponent,
     MainPageComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
