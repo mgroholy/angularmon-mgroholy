@@ -23,4 +23,11 @@ export interface PokemonDetails {
       };
     };
   };
+  types: PokemonType[];
+}
+
+interface PokemonType {
+  type: {
+    name: string;
+  };
 }
