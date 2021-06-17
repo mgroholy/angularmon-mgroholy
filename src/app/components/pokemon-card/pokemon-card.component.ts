@@ -31,6 +31,7 @@ export class PokemonCardComponent implements OnInit {
           },
         },
       },
+      types: [],
     };
   }
 

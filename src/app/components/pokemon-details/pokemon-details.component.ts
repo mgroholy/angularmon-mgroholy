@@ -24,6 +24,7 @@ export class PokemonDetailsComponent implements OnInit {
         },
       },
     },
+    types: [],
   };
 
   constructor(
@@ -38,5 +39,11 @@ export class PokemonDetailsComponent implements OnInit {
         .getPokemonDetailsById(parseInt(this.id))
         .subscribe((pokemon) => (this.pokemonDetails = pokemon));
     }
+  }
+  formatName(): string {
+    return (
+      this.pokemonDetails.name.charAt(0).toUpperCase() +
+      this.pokemonDetails.name.substring(1)
+    );
   }
 }
