@@ -18,9 +18,16 @@ export interface PokemonDetails {
   sprites: {
     front_default: string;
     other: {
-      official_artwork: {
+      'official-artwork': {
         front_default: string;
       };
     };
+  };
+  types: PokemonType[];
+}
+
+interface PokemonType {
+  type: {
+    name: string;
   };
 }

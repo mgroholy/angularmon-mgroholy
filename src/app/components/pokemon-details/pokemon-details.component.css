@@ -1,0 +1,21 @@
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 95%;
+  margin: 50px auto;
+  border-radius: 10px;
+}
+
+.details-card {
+  border-radius: 10px;
+  border: 2px solid #2c4694;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+}
+.content {
+  width: 35%;
+}

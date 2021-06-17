@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router, NavigationExtras, ActivatedRoute } from '@angular/router';
 import { ApiServiceService } from 'src/app/services/api-service.service';
 import { ListItem, PokemonDetails } from 'src/app/Types';
 
@@ -11,7 +12,11 @@ export class PokemonCardComponent implements OnInit {
   @Input() pokemon: ListItem;
   pokemonDetails: PokemonDetails;
 
-  constructor(private apiService: ApiServiceService) {
+  constructor(
+    private apiService: ApiServiceService,
+    private router: Router,
+    private route: ActivatedRoute
+  ) {
     this.pokemon = { name: '', url: '' };
     this.pokemonDetails = {
       name: '',
@@ -21,18 +26,18 @@ export class PokemonCardComponent implements OnInit {
       sprites: {
         front_default: '',
         other: {
-          official_artwork: {
+          'official-artwork': {
             front_default: '',
           },
         },
       },
+      types: [],
     };
   }
 
   ngOnInit(): void {
     this.apiService.getPokemonDetails(this.pokemon.url).subscribe((pokemon) => {
       this.pokemonDetails = pokemon;
-      console.log(pokemon);
     });
   }
 
@@ -41,5 +46,9 @@ export class PokemonCardComponent implements OnInit {
       this.pokemonDetails.name.charAt(0).toUpperCase() +
       this.pokemonDetails.name.substring(1)
     );
+  }
+
+  goToDetails(): void {
+    this.router.navigate([this.pokemonDetails.id], { relativeTo: this.route });
   }
 }

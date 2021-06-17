@@ -19,6 +19,10 @@ export class ApiServiceService {
     return this.httpClient.get<PokemonDetails>(url);
   }
 
+  getPokemonDetailsById(id: number): Observable<PokemonDetails> {
+    return this.httpClient.get<PokemonDetails>(`${this.apiUrl}/pokemon/${id}`);
+  }
+
   getTypes(): Observable<ApiResponse> {
     return this.httpClient.get<ApiResponse>(`${this.apiUrl}/type`);
   }
