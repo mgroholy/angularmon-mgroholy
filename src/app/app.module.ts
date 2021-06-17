@@ -12,6 +12,7 @@ import { TypeListComponent } from './components/type-list/type-list.component';
 import { TypeCardComponent } from './components/type-card/type-card.component';
 import { PokemonDetailsComponent } from './components/pokemon-details/pokemon-details.component';
 import { PaginationComponent } from './components/pagination/pagination.component';
+import { MainPageComponent } from './components/main-page/main-page.component';
 
 const appRoutes: Routes = [
   {
@@ -26,6 +27,10 @@ const appRoutes: Routes = [
     path: 'pokemons/:id',
     component: PokemonDetailsComponent,
   },
+  {
+    path: '',
+    component: MainPageComponent,
+  },
 ];
 
 @NgModule({
@@ -38,6 +43,7 @@ const appRoutes: Routes = [
     TypeCardComponent,
     PokemonDetailsComponent,
     PaginationComponent,
+    MainPageComponent,
   ],
   imports: [
     BrowserModule,
