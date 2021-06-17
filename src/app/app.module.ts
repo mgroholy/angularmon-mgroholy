@@ -8,11 +8,16 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { PokemonListComponent } from './components/pokemon-list/pokemon-list.component';
 import { PokemonCardComponent } from './components/pokemon-card/pokemon-card.component';
+import { TypeListComponent } from './components/type-list/type-list.component';
 
 const appRoutes: Routes = [
   {
     path: 'pokemons',
     component: PokemonListComponent,
+  },
+  {
+    path: 'types',
+    component: TypeListComponent,
   },
 ];
 
@@ -22,6 +27,7 @@ const appRoutes: Routes = [
     NavbarComponent,
     PokemonListComponent,
     PokemonCardComponent,
+    TypeListComponent,
   ],
   imports: [
     BrowserModule,
