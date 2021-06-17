@@ -11,6 +11,7 @@ import { PokemonCardComponent } from './components/pokemon-card/pokemon-card.com
 import { TypeListComponent } from './components/type-list/type-list.component';
 import { TypeCardComponent } from './components/type-card/type-card.component';
 import { PokemonDetailsComponent } from './components/pokemon-details/pokemon-details.component';
+import { PaginationComponent } from './components/pagination/pagination.component';
 
 const appRoutes: Routes = [
   {
@@ -36,6 +37,7 @@ const appRoutes: Routes = [
     TypeListComponent,
     TypeCardComponent,
     PokemonDetailsComponent,
+    PaginationComponent,
   ],
   imports: [
     BrowserModule,

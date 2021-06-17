@@ -2,3 +2,8 @@
   <app-pokemon-card *ngFor="let pokemon of pokemons" [pokemon]="pokemon">
   </app-pokemon-card>
 </div>
+<app-pagination
+  (switchPageEvent)="switchPage($event)"
+  [next]="next"
+  [previous]="previous"
+></app-pagination>

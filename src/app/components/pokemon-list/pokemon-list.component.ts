@@ -9,12 +9,24 @@ import { ListItem } from 'src/app/Types';
 })
 export class PokemonListComponent implements OnInit {
   pokemons: ListItem[] = [];
+  previous: string = '';
+  next: string = '';
 
   constructor(private apiService: ApiServiceService) {}
 
   ngOnInit(): void {
-    this.apiService
-      .getPokemons()
-      .subscribe((response) => (this.pokemons = response.results));
+    this.apiService.getPokemons().subscribe((response) => {
+      this.pokemons = response.results;
+      this.previous = response.previous;
+      this.next = response.next;
+    });
+  }
+
+  switchPage(url: string): void {
+    this.apiService.getPokemons(url).subscribe((response) => {
+      this.pokemons = response.results;
+      this.previous = response.previous;
+      this.next = response.next;
+    });
   }
 }
