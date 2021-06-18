@@ -36,6 +36,10 @@ const appRoutes: Routes = [
     path: '**',
     component: PageNotFoundComponent,
   },
+  {
+    path: '/not-found',
+    component: PageNotFoundComponent,
+  },
 ];
 
 @NgModule({
