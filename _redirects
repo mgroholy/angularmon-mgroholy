@@ -1,0 +1,5 @@
+/               /
+/pokemons       /pokemons
+/pokemons/*     /types:splat
+/types          /types
+/*              /not-found
