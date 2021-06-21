@@ -37,7 +37,7 @@ const appRoutes: Routes = [
     component: PageNotFoundComponent,
   },
   {
-    path: '/not-found',
+    path: 'not-found',
     component: PageNotFoundComponent,
   },
 ];
